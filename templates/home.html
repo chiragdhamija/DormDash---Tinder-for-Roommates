@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/344e53a5e8.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/impact');
+
+    @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Public+Sans:wght@300;400&display=swap");
+
+    body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      height: 100vh;
+      width: 100vw;
+      /* overflow-y: hidden; */
+    background-image: url('../static/background.png');
+    background-size: cover;
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #mainnavcont {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    #mainnav {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      margin: 0;
+      padding: 1vh;
+      z-index: 10;
+    }
+
+    #logo {
+      color: white;
+      font-size: 2.5rem;
+      font-family: "Delicious Handrawn", cursive;
+      font-weight: bold;
+      padding: 1vh 0 2vh 0;
+      display: flex;
+      justify-content: center;
+      /* flex-direction: column; */
+      transform: translateX(0.75vw);
+      align-items: center;
+    }
+
+    #subnav {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+    }
+
+    .navlink {
+      text-decoration: none;
+      color: white;
+      font-family: 'Impact', sans-serif;
+
+      font-size: large;
+      font-weight: 500;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 3.5vh;
+
+      color: #302f2f;
+      cursor: pointer;
+      width: 45vh;
+      background-color: #f6dddd;
+      padding-left: 4vh;
+      height: 10vh;
+
+    }
+
+    .navlink::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: rgb(242, 136, 187);
+      width: var(--width, 0%);
+      transition: 0.68s;
+      margin: 0px auto;
+    }
+
+    form {
+
+      width: 300px;
+      margin: -5vh auto;
+
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10 rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0062cc;
+    }
+
+    h1 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      color: #000000;
+      font-size: 3rem;
+    }
+
+
+
+
+
+
+
+    #mainbod {
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+    #footer {
+      background-color: black;
+      height: 7vh;
+      width: 100vw;
+      position: fixed;
+
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-family: 'Impact', sans-serif;
+    }
+
+    #footer a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Impact', sans-serif;
+      padding-left: 35vw;
+    }
+
+    button i {
+
+      margin-left: 2vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mainnavcont">
+    <div id="mainnav">
+      <div id="logo"><a href="/home">DormDash</a><a href="/logout"><div style="position: absolute; right:3vw; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: large;font-weight: 500;"> LOGOUT <i class="fa fa-sign-out"></i></div></a></div>
+>
+        <ul id="subnav">
+          <li><a href="/home" class="navlink" id="hometext">HOME</a></li>
+          <li><a href="/matches" class="navlink" id="artisttext">MATCHES</a></li>
+          <li><a href="/browse" class="navlink" id="abouttext">BROWSE</a></li>
+          <li><a href="/view" class="navlink" id="abouttext">View/Edit Profile</a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div id="mainbod">
+    <h1 style="margin-top: 10vh;" id="uss">Welcome, {{namePlace}}</h1>
+
+
+
+      
+    <div class="button-container">
+      <a href="/matches"><button class="button">View Matches<i class="fas fa-handshake"></i> </button></a>
+      <a href="/browse"><button style="margin-top: 4vh;" class="button">Browse roommates<i
+            class="fas fa-search"></i></button></a>
+    </div>
+
+
+
+    <div id="footer">
+      <p>Created by Akshat,Chirag & Harpreet</p>
+      <a href="/about">More About Us</a>
+    </div>
+</body>
+<script>
+  window.onload = function () {
+    Title3();
+  }
+
+  const navLinks = document.querySelectorAll('.navlink');
+
+  navLinks.forEach(navLink => {
+    navLink.addEventListener('mouseover', () => {
+      navLink.style.setProperty('--width', '100%');
+    });
+    navLink.addEventListener('mouseout', () => {
+      navLink.style.setProperty('--width', '0%');
+    });
+  });
+  var speed = 50;
+  txt3 = document.getElementById("uss").innerText;
+  document.getElementById("uss").innerText=''
+  var i3 = 0;
+  function Title3() {
+    if (i3 < txt3.length) {
+      document.getElementById("uss").innerHTML += txt3.charAt(i3);
+      i3++;
+      setTimeout(Title3, speed);
+    }
+  }
+  
+
+</script>
+
+</html>
